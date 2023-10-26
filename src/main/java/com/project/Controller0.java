@@ -25,7 +25,7 @@ public class Controller0 {
     @FXML
     private ProgressBar taskbar1, taskbar2, taskbar3;
     
-    private ExecutorService executor = Executors.newFixedThreadPool(3); // Creem una pool de dos fils
+    private ExecutorService executor = Executors.newFixedThreadPool(3); 
 
     private Future<?> future0, future1, future2;
     private int progress1 = 0, progress2 = 0;
