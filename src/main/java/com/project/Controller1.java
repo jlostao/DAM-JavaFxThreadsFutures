@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -15,17 +16,20 @@ import javafx.scene.layout.AnchorPane;
 public class Controller1 implements initialize {
 
     @FXML
-    private Button button0, button1;
+    private Button button0, button1, button2;
     @FXML
-    private ImageView img;
+    private ImageView img0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, 
+    img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23;
     @FXML
     private AnchorPane container;
     @FXML
-    private Label loading;
+    private Label progresslabel;
+    @FXML
+    private ProgressBar progressbar;
 
     @FXML
     public void initialize() {
-        loading.setVisible(false);
+        progresslabel.setVisible(false);
     }
 
     @FXML
@@ -36,12 +40,12 @@ public class Controller1 implements initialize {
     @FXML
     private void loadImage() {
         System.out.println("Loading image...");
-        loading.setVisible(true);
-        img.setImage(null);
+        progresslabel.setVisible(true);
+        img0.setImage(null);
         loadImageBackground((image) -> {
             System.out.println("Image loaded");
-            img.setImage(image);
-            loading.setVisible(false);
+            img0.setImage(image);
+            progresslabel.setVisible(false);
         });
     }
 
