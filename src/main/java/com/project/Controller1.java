@@ -95,7 +95,7 @@ public class Controller1 implements initialize {
         CompletableFuture<Image> futureImage = CompletableFuture.supplyAsync(() -> {
             try {
                 // Wait a second to simulate a long loading time
-                Thread.sleep(1000);
+                Thread.sleep(rand.nextInt(45001) + 5000);
 
                 // Load the data from the assets file
                 Image newImage = new Image(getClass().getResource("/assets/" + imageName).toString());
